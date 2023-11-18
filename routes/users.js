@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const User = require("../models/usermodel");
-const mongoose = require("mongoose");
-
 //UPDATE USER
 router.put("/api/user/:id", async (req, res) => {
   if (req.body.userId === req.params.id || req.body.isAdmin) {
